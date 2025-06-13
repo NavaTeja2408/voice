@@ -1,0 +1,238 @@
+/* ✅ All imports must come first */
+@import url('https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Montserrat:wght@400;600&family=Roboto:wght@400;700&family=Playfair+Display:wght@400;700&family=Oswald:wght@400;700&family=Lobster&family=Pacifico&family=Bebas+Neue&family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import "tailwindcss"; /* if you're importing Tailwind via CSS */
+
+
+
+
+
+
+
+
+.font-arial {
+  font-family: Arial, sans-serif;
+}
+
+.font-helvetica {
+  font-family: Helvetica, sans-serif;
+}
+
+.font-poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
+.font-montserrat {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.font-roboto {
+  font-family: 'Roboto', sans-serif;
+}
+
+.font-times-new-roman {
+  font-family: 'Times New Roman', serif;
+}
+
+.font-georgia {
+  font-family: Georgia, serif;
+}
+
+.font-playfair-display {
+  font-family: 'Playfair Display', serif;
+}
+
+.font-merriweather {
+  font-family: 'Merriweather', serif;
+}
+
+.font-garamond {
+  font-family: Garamond, serif;
+}
+
+.font-lobster {
+  font-family: 'Lobster', cursive;
+}
+
+.font-pacifico {
+  font-family: 'Pacifico', cursive;
+}
+
+.font-bebas-neue {
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.font-anton {
+  font-family: 'Anton', sans-serif;
+}
+
+.font-oswald {
+  font-family: 'Oswald', sans-serif;
+}
+
+/* Hide scrollbar for Webkit browsers (Chrome, Safari, Edge) */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+.scrollbar-hide {
+  scrollbar-width: none;
+}
+
+/* Hide scrollbar for Edge */
+.scrollbar-hide::-ms-overflow-style {
+  scrollbar-width: none;
+}
+
+
+.be-vietnam-pro-thin {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.be-vietnam-pro-extralight {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.be-vietnam-pro-light {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.be-vietnam-pro-regular {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-style: normal;
+}
+
+.be-vietnam-pro-medium {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+
+@media screen and (max-width: 1000px) { 
+  .part_1 {
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .part_1 h1 {
+    font-size: x-large;
+  }
+  .part_2 {
+    font-size: 40px;
+  }
+  .part_3 {
+    font-size: 50px;
+  }
+  .part_4 {
+    display: none;
+  }
+  .part_5 {
+    width: 95%;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  .part_5 div {
+    width: 100%;
+    padding: 5px;
+    height: fit-content;
+  }
+
+  .part_5 p {
+    font-size: smaller;
+  }
+  .part_6 {
+    width: 50%;
+  }
+
+  .part_7 {
+    padding: 2rem;
+  }
+  .part_8 {
+    font-size: medium;
+  }
+  .part_9 {
+    font-size: larger;
+  }
+  .part_10 {
+    font-size: xx-large;
+    width: 90%;
+    margin-top: 2rem;
+  }
+
+  .part_11 {
+    flex-direction: column;
+    width: 90%;
+    gap: 20px;
+    margin-top: 15px;
+  }
+
+  .part_11 div {
+    width: 100%;
+    height: fit-content;
+    gap: 1;
+    padding: 10px;
+    
+  }
+  .part_11 h1 {
+    font-size: large;
+  }
+  .part_11 li {
+    margin-top: 4px;
+    font-size: smaller;
+  }
+  .part_12 {
+    padding: 2rem;
+  }
+  
+  .part_13 {
+    font-size: xx-large;
+    width: 90%;
+    margin-top: 2rem;
+  }
+  .part_14 {
+    width: 100%;
+    padding: 1rem;
+    
+  }
+  .part_14 div {
+    gap: 5px;
+  }
+  .part_14 button {
+    width: 40%;
+  }
+
+  .part_16 {
+    height: fit-content;
+    width: 100%;
+    font-size: smaller;
+    margin-top: 15px;
+  }
+
+  .part_16 ul {
+    display: none;
+  }
+
+
+  .part_17 {
+    display: none;
+  }
+
+  .part_18 {
+    display: none;
+  }
+  
+  
+
+  
+
+ }
