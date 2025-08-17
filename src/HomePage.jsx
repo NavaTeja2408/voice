@@ -18,7 +18,6 @@ const HomePage = () => {
     event.preventDefault();
     setResult("Sending....");
     const formData = new FormData(event.target);
-
     formData.append("access_key", "dbc344f5-7af9-4a00-b25f-62c47ad536df");
 
     const response = await fetch("https://api.web3forms.com/submit", {
@@ -27,7 +26,6 @@ const HomePage = () => {
     });
 
     const data = await response.json();
-
     if (data.success) {
       toast.success("Form Submitted Successfully");
       setResult("Form Submitted Successfully");
@@ -37,7 +35,6 @@ const HomePage = () => {
       setResult(data.message);
     }
   };
-
   const handleScroll = () => {
     myDivRef.current?.scrollIntoView({ behavior: "smooth" });
   };
@@ -221,13 +218,183 @@ const HomePage = () => {
             backgroundPosition: "center",
           }}
         >
-          <div className="absolute inset-0 bg-black opacity-10"></div>
+          <div className="absolute inset-0 bg-black opacity-40"></div>
         </div>
+
+        {/* Content Layer */}
+        <div className="relative w-full z-10 flex flex-col items-start justify-start px-24 pt-28 h-full part_7">
+          <h1 className=" text-white absolute top-8 left-8 ">
+            <span className="text-4xl text-green-700 font-semibold part_8">
+              voice<span className="text-yellow-400 text-5xl part_9">IQ</span>
+            </span>
+          </h1>
+          {/* <p className="text-gray-200 text-center text-xs mt-2">
+            We create AI agents for customer support starting at just $349
+          </p> */}
+          <motion.h1
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1.5, delay: 0.2 }}
+            className="text-5xl text-white mt-5 py-3 px-2 w-[90%] border-b-4 border-white part_13"
+          >
+            About us
+          </motion.h1>
+          <div className="w-[90%] flex items-center justify-between mt-14 part_16">
+            <div
+              //   style={{
+              //     backgroundColor: "rgba(160, 51, 233, 1)",
+              //   }}
+              className="w-[100%] h-fit  px-4 py-6 text-gray-100  rounded-md  bg-yellow-600 flex flex-col gap-3 "
+            >
+              <p>
+                Founded on June 13, 2025, our company is driven by a passion for
+                innovation in AI-powered customer service solutions. We
+                specialize in building intelligent virtual agents that enhance
+                user experiences, streamline operations, and optimize customer
+                engagement across industries.
+              </p>
+              <p>
+                Our offerings include advanced AI agents for customer support,
+                secure and efficient data handling, smart scheduling tools to
+                manage client interactions, and robust concurrency management
+                systems to ensure smooth, simultaneous operations.
+              </p>
+              <p className="part_17">
+                At the core of our company is a dynamic leadership team
+                committed to shaping the future of AI:
+              </p>
+              <ul className=" list-disc pl-6">
+                <li className="mt-2 ">
+                  Pendiala Navateja – Chief Executive Officer (CEO)
+                </li>
+                <li className="mt-2">
+                  Kavali Sairam – Chief Technology Officer (CTO)
+                </li>
+                <li className="mt-2">
+                  Ambati Shyam Raj – Chief Operating Officer (COO)
+                </li>
+              </ul>
+              <p>
+                Together, we’re reimagining how businesses connect with their
+                customers—smarter, faster, and more human than ever before.
+              </p>
+            </div>
+          </div>
+        </div>
+      </InViewOpacitySlide>
+      {/* Full-Width AI Voice Assistance Section */}
+      <section className="relative w-full bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white py-20 px-12">
+        <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-12">
+          {/* Left Side - Content */}
+          <div className="flex-1">
+            <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
+              AI-Generated{" "}
+              <span className="text-yellow-400">Voice Assistance</span>
+            </h2>
+            <p className="text-lg text-gray-300 leading-relaxed mb-6">
+              Our cutting-edge AI voice assistants provide natural, human-like
+              conversations that feel effortless. From handling customer queries
+              to scheduling appointments, our AI adapts to your business needs
+              and ensures a smooth, professional interaction every time.
+            </p>
+            <p className="text-lg text-gray-300 leading-relaxed mb-6">
+              With advanced voice synthesis, multilingual support, and emotional
+              tone recognition, our AI goes beyond simple automation. It creates
+              an experience that builds trust, saves time, and improves customer
+              satisfaction dramatically.
+            </p>
+            <ul className="list-disc pl-6 text-gray-300 space-y-3">
+              <li>24/7 availability with instant response time</li>
+              <li>Supports multiple languages and accents</li>
+              <li>Customizable tone to match your brand identity</li>
+              <li>Seamless integration with existing systems</li>
+            </ul>
+          </div>
+
+          {/* Right Side - Illustration */}
+          <div className="flex-1 flex items-center justify-center">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/4712/4712107.png"
+              alt="AI Voice Assistant"
+              className="w-[80%] max-w-sm rounded-2xl shadow-lg"
+            />
+          </div>
+        </div>
+      </section>
+      <section className="relative w-full bg-white text-gray-900 py-20 px-12">
+        <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-12">
+          {/* Left Side - Illustration */}
+          <div className="flex-1 flex items-center justify-center">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/4712/4712134.png"
+              alt="AI Customer Support"
+              className="w-[80%] max-w-sm rounded-2xl shadow-xl"
+            />
+          </div>
+
+          {/* Right Side - Content */}
+          <div className="flex-1">
+            <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
+              Overcoming the Challenges of Manual Customer Care
+            </h2>
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              Traditional customer support often faces challenges such as long
+              waiting times, limited availability, language barriers, and high
+              training costs. These issues can frustrate customers and lead to
+              lost business opportunities.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              Our AI-powered customer care agents eliminate these problems by
+              providing{" "}
+              <span className="font-semibold">
+                instant, scalable, and cost-effective
+              </span>
+              solutions. They never tire, learn from interactions, and deliver
+              consistent, high-quality support 24/7.
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+              <div className="p-4 border-l-4 border-yellow-400 bg-gray-50 rounded">
+                <h3 className="font-semibold text-xl mb-2">
+                  ⚡ Faster Responses
+                </h3>
+                <p className="text-gray-600 text-sm">
+                  No more waiting in long queues — AI responds instantly.
+                </p>
+              </div>
+              <div className="p-4 border-l-4 border-green-500 bg-gray-50 rounded">
+                <h3 className="font-semibold text-xl mb-2">🌍 Global Reach</h3>
+                <p className="text-gray-600 text-sm">
+                  Breaks language barriers with multilingual support.
+                </p>
+              </div>
+              <div className="p-4 border-l-4 border-blue-500 bg-gray-50 rounded">
+                <h3 className="font-semibold text-xl mb-2">
+                  💰 Cost Effective
+                </h3>
+                <p className="text-gray-600 text-sm">
+                  Reduce overheads on hiring and training large teams.
+                </p>
+              </div>
+              <div className="p-4 border-l-4 border-purple-500 bg-gray-50 rounded">
+                <h3 className="font-semibold text-xl mb-2">
+                  🤝 Consistent Quality
+                </h3>
+                <p className="text-gray-600 text-sm">
+                  Every customer gets the same reliable experience.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <InViewOpacitySlide className="relative h-screen w-full be-vietnam-pro-regular">
+        {/* Background Image with Overlay */}
 
         {/* Content Layer */}
         <div
           ref={myDivRef}
-          className="relative z-10 flex flex-col items-start justify-start px-24 pt-28 h-full part_12"
+          className="relative z-10 flex flex-col items-start justify-start px-24 pt-28 h-full part_12  bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900"
         >
           <h1 className=" text-white absolute top-8 left-8">
             <span className="text-4xl text-green-700 font-semibold part_8">
@@ -295,92 +462,96 @@ const HomePage = () => {
           </form>
         </div>
       </InViewOpacitySlide>
-      <InViewOpacitySlide className="relative h-screen w-full be-vietnam-pro-regular">
-        {/* Background Image with Overlay */}
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage: `url(${home_10})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        >
-          <div className="absolute inset-0 bg-black opacity-40"></div>
-        </div>
-
-        {/* Content Layer */}
-        <div className="relative w-full z-10 flex flex-col items-start justify-start px-24 pt-28 h-full part_7">
-          <h1 className=" text-white absolute top-8 left-8 ">
-            <span className="text-4xl text-green-700 font-semibold part_8">
-              voice<span className="text-yellow-400 text-5xl part_9">IQ</span>
-            </span>
+      <div className="bg-black text-white px-0 py-12 leading-relaxed be-vietnam-pro-regular">
+        <div className="max-w-4xl mx-auto space-y-12">
+          {/* Company Name / Logo */}
+          <h1 className="text-4xl font-bold text-center text-green-700">
+            voice<span className="text-yellow-500">IQ</span>.ai
           </h1>
-          {/* <p className="text-gray-200 text-center text-xs mt-2">
-            We create AI agents for customer support starting at just $349
-          </p> */}
-          <motion.h1
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1.5, delay: 0.2 }}
-            className="text-5xl text-white mt-5 py-3 px-2 w-[90%] border-b-4 border-white part_13"
-          >
-            About us
-          </motion.h1>
-          <div className="w-[90%] flex items-center justify-between mt-14 part_16">
-            <div
-              //   style={{
-              //     backgroundColor: "rgba(160, 51, 233, 1)",
-              //   }}
-              className="w-[100%] h-fit  px-4 py-6 text-gray-100  rounded-md  bg-yellow-600 flex flex-col gap-3 "
-            >
-              <p>
-                Founded on June 13, 2025, our company is driven by a passion for
-                innovation in AI-powered customer service solutions. We
-                specialize in building intelligent virtual agents that enhance
-                user experiences, streamline operations, and optimize customer
-                engagement across industries.
-              </p>
-              <p>
-                Our offerings include advanced AI agents for customer support,
-                secure and efficient data handling, smart scheduling tools to
-                manage client interactions, and robust concurrency management
-                systems to ensure smooth, simultaneous operations.
-              </p>
-              <p className="part_17">
-                At the core of our company is a dynamic leadership team
-                committed to shaping the future of AI:
-              </p>
-              <ul className=" list-disc pl-6">
-                <li className="mt-2 ">
-                  Pendiala Navateja – Chief Executive Officer (CEO)
-                </li>
-                <li className="mt-2">
-                  Kavali Sairam – Chief Technology Officer (CTO)
-                </li>
-                <li className="mt-2">
-                  Ambati Shyam Raj – Chief Operating Officer (COO)
-                </li>
-              </ul>
-              <p>
-                Together, we’re reimagining how businesses connect with their
-                customers—smarter, faster, and more human than ever before.
-              </p>
-            </div>
-          </div>
-          <div className="absolute bottom-0 left-0 w-[100vw]  bg-black">
-            <div className=" text-white  h-20 flex items-center justify-center gap-12 w-full part_18  ">
-              <p className="pl-4">management@voiceiqtech.com</p>
-              <p>+91 9390576853</p>
-              <p className="pr-4">voiceIQ.ai</p>
-            </div>
-            <div className="w-full flex items-center justify-center pb-4 text-white">
-              <p className="text-sm text-gray-300">
-                @2025 Copyright belongs to voiceIQ.ai
-              </p>
-            </div>
-          </div>
+          <p className="text-center text-gray-600">
+            Founded on June 13, 2025 • AI-powered customer support solutions
+          </p>
+
+          {/* About Us */}
+          <section>
+            <h2 className="text-2xl font-semibold mb-3">About Us</h2>
+            <p>
+              At <strong>voiceIQ.ai</strong>, we create AI-powered customer
+              support agents that help businesses manage calls, bookings, and
+              messages 24/7. Our goal is to reduce costs, improve response
+              times, and make customer service smarter and more human.
+            </p>
+          </section>
+
+          {/* Contact Info */}
+          <section>
+            <h2 className="text-2xl font-semibold mb-3">Contact Us</h2>
+            <p>
+              Email:{" "}
+              <a
+                href="mailto:management@voiceiqtech.com"
+                className="text-blue-600"
+              >
+                management@voiceiqtech.com
+              </a>
+            </p>
+            <p>Phone: +91 9390576853</p>
+            <p>
+              Website:{" "}
+              <a href="https://voiceiqtech.com" className="text-blue-600">
+                https://voiceiqtech.com
+              </a>
+            </p>
+          </section>
+
+          {/* Privacy Policy */}
+          <section>
+            <h2 className="text-2xl font-semibold mb-3">Privacy Policy</h2>
+            <p>
+              We respect your privacy. Information you share via our forms (such
+              as name, email, and phone number) will only be used to respond to
+              your inquiries and provide our services. We do not sell, trade, or
+              share your personal information with third parties except as
+              required by law.
+            </p>
+          </section>
+
+          {/* Terms & Conditions */}
+          <section>
+            <h2 className="text-2xl font-semibold mb-3">Terms & Conditions</h2>
+            <ul className="list-disc pl-5 space-y-2">
+              <li>
+                By using our website, you agree to comply with our policies.
+              </li>
+              <li>All services are subject to our pricing and availability.</li>
+              <li>
+                We are not liable for any indirect losses from the use of our
+                services.
+              </li>
+              <li>
+                We may update these terms at any time without prior notice.
+              </li>
+            </ul>
+          </section>
+
+          {/* Disclaimer */}
+          <section>
+            <h2 className="text-2xl font-semibold mb-3">Disclaimer</h2>
+            <p>
+              The content on this site is provided for informational purposes
+              only. While we strive for accuracy, <strong>voiceIQ.ai</strong>{" "}
+              makes no guarantees regarding completeness or suitability of the
+              information for any purpose. Use of our services is at your own
+              discretion.
+            </p>
+          </section>
+
+          {/* Footer */}
+          <footer className="border-t pt-6 text-center text-gray-500 text-sm">
+            © {new Date().getFullYear()} voiceIQ.ai • All Rights Reserved
+          </footer>
         </div>
-      </InViewOpacitySlide>
+      </div>
     </div>
   );
 };
